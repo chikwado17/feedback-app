@@ -1,9 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
-ReactDOM.render(
-    <App />,
-  document.getElementById('root')
-);
+
+
+
+
+const rootEl = document.getElementById('root');
+
+const render = () => {
+  ReactDOM.render(
+    <BrowserRouter>
+        <App/>
+    </BrowserRouter>, rootEl);
+}
+
+if(module.hot) {
+  module.hot.accept('./App', () => {
+    setTimeout(render);
+  })
+}
+
+render();
