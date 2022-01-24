@@ -10,10 +10,9 @@ const AboutPage = () => {
                 <p>A simple react app for rating your products and services</p>
                 <p>Version 1.0.0</p>
                 <p>Dev Emma</p>
-
-               <p>
+                <p>
                     <Link to='/'>Back To Home</Link>
-               </p>
+                </p>
             </div>
         </Card>
     )
