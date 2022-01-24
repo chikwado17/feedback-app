@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import Card from './shared/Card';
 import Button from './shared/Button';
 import RatingSelect from './RatingSelect';
@@ -54,7 +53,6 @@ const FeedbackForm = () => {
         if(text.trim().length > 10) {
 
             const feedbackData = {
-                id: uuidv4(),
                 text,
                 rating
             }
